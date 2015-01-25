@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    {{ parent() }} - Pokemon
+{% endblock %}
+{% block content %}
+
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Hp</th>
+            <th>Type</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="default">
+            <th scope="row">1</th>
+            <td>{{ pokemons.name }}</td>
+            <td>{{ pokemons.hp }}</td>
+            <td>{{ type }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <small>Create by {{ homeSession.username }}</small>
+    <br>
+    <a href="revive.php"><button type="button" class="btn btn-success">Revive !</button></a>
+{% endblock %}
